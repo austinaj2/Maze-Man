@@ -226,23 +226,39 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     @objc func swiped(_ sender: UISwipeGestureRecognizer){
-        var gr = SKAction()
+        let st = player.position.x
+        let o = player.position.x+64
         if sender.direction == .right {
-            gr = SKAction.sequence([SKAction.moveBy(x: 64, y: 0, duration: 0.5)])
+            let distance = sqrt(pow((self.size.width-player.position.x-32), 2.0) + pow((self.size.width-player.position.y-32), 2.0));
+            let go = distance/200
+            let acts = SKAction.sequence([SKAction.moveBy(x: self.size.width-player.position.x-32, y: 0, duration: go)])
+            let flip1 = SKAction.scaleX(to: CGFloat(-1), duration: 0.0001)
+            let gr = SKAction.group([acts, flip1])
+            player.removeAction(forKey: "left")
+            player.run(gr, withKey: "right")
         }
         if sender.direction == .left {
-            gr = SKAction.sequence([SKAction.moveBy(x: -64, y: 0, duration: 0.5)])
+            let distance = sqrt(pow((0-player.position.x+32), 2.0) + pow((0-player.position.y+32), 2.0));
+            let go = distance/200
+            let acts = SKAction.sequence([SKAction.moveBy(x: 0-player.position.x+32, y: 0, duration: go)])
+            let flip1 = SKAction.scaleX(to: CGFloat(1), duration: 0.0001)
+            let gr = SKAction.group([acts, flip1])
+            player.removeAction(forKey: "right")
+            player.run(gr, withKey: "left")
         }
         if sender.direction == .up {
-            gr = SKAction.sequence([SKAction.moveBy(x: 0, y: 64, duration: 0.5), SKAction.moveBy(x: 0, y: -64, duration: 0.75)])
+            
+            let gr = SKAction.sequence([SKAction.moveBy(x: 0, y: 64, duration: 0.5), SKAction.moveBy(x: 0, y: -64, duration: 0.75)])
+            player.run(gr, withKey: "up")
         }
-        player.run(gr)
+//        player.removeAllActions()
+//        player.run(gr, withKey: "now")
     }
     
     func addBitMasks(){
         
         player.physicsBody?.categoryBitMask = PhysicsCategory.Player
-        player.physicsBody?.collisionBitMask = PhysicsCategory.Block | PhysicsCategory.Water | PhysicsCategory.Dino1 | PhysicsCategory.Dino2 | PhysicsCategory.Dino3 | PhysicsCategory.Dino4
+        player.physicsBody?.collisionBitMask = PhysicsCategory.Block | PhysicsCategory.Water | PhysicsCategory.Dino1 | PhysicsCategory.Dino2 | PhysicsCategory.Dino3 | PhysicsCategory.Dino4 | PhysicsCategory.EdgeLeft | PhysicsCategory.EdgeRight | PhysicsCategory.Top | PhysicsCategory.Ground
         player.physicsBody?.contactTestBitMask =  PhysicsCategory.Block
         
         dino1.physicsBody?.categoryBitMask = PhysicsCategory.Dino1
