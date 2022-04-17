@@ -763,7 +763,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         dino3.zPosition = 1.0
         dino3.size = CGSize(width: standard.width, height: standard.height)
         dino3.xScale = CGFloat(1)
-        addChild(dino3)
+//        addChild(dino3)
         showDino3 = true
         
         let dino3moveRight = SKAction.moveBy(x: self.size.width-dino3.position.x-32, y: 0, duration: 3)

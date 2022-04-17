@@ -18,8 +18,8 @@
 		915C35622803CB6500E06375 /* Maze_ManUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915C35612803CB6500E06375 /* Maze_ManUITestsLaunchTests.swift */; };
 		917DC70D280B5C330005CD72 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917DC70C280B5C330005CD72 /* GameOverScene.swift */; };
 		917DC70F280B60A00005CD72 /* HighScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917DC70E280B60A00005CD72 /* HighScore.swift */; };
-		917DC717280BA9330005CD72 /* bite.wav in Resources */ = {isa = PBXBuildFile; fileRef = 917DC715280BA9330005CD72 /* bite.wav */; };
-		917DC718280BA9330005CD72 /* death.wav in Resources */ = {isa = PBXBuildFile; fileRef = 917DC716280BA9330005CD72 /* death.wav */; };
+		917DC71B280BB7240005CD72 /* bite.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 917DC719280BB7240005CD72 /* bite.mp3 */; };
+		917DC71C280BB7240005CD72 /* death.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 917DC71A280BB7240005CD72 /* death.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +54,8 @@
 		915C35612803CB6500E06375 /* Maze_ManUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maze_ManUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		917DC70C280B5C330005CD72 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		917DC70E280B60A00005CD72 /* HighScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScore.swift; sourceTree = "<group>"; };
-		917DC715280BA9330005CD72 /* bite.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bite.wav; sourceTree = "<group>"; };
-		917DC716280BA9330005CD72 /* death.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = death.wav; sourceTree = "<group>"; };
+		917DC719280BB7240005CD72 /* bite.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bite.mp3; path = ../../../../Downloads/bite.mp3; sourceTree = "<group>"; };
+		917DC71A280BB7240005CD72 /* death.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = death.mp3; path = ../../../../Downloads/death.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +110,8 @@
 				915C35412803CB6400E06375 /* GameScene.swift */,
 				917DC70E280B60A00005CD72 /* HighScore.swift */,
 				917DC70C280B5C330005CD72 /* GameOverScene.swift */,
-				917DC715280BA9330005CD72 /* bite.wav */,
-				917DC716280BA9330005CD72 /* death.wav */,
+				917DC719280BB7240005CD72 /* bite.mp3 */,
+				917DC71A280BB7240005CD72 /* death.mp3 */,
 				915C35432803CB6400E06375 /* GameViewController.swift */,
 				915C35452803CB6400E06375 /* Main.storyboard */,
 				915C35482803CB6500E06375 /* Assets.xcassets */,
@@ -245,11 +245,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				917DC718280BA9330005CD72 /* death.wav in Resources */,
-				917DC717280BA9330005CD72 /* bite.wav in Resources */,
 				915C35472803CB6400E06375 /* Main.storyboard in Resources */,
 				915C35492803CB6500E06375 /* Assets.xcassets in Resources */,
+				917DC71B280BB7240005CD72 /* bite.mp3 in Resources */,
 				915C354C2803CB6500E06375 /* LaunchScreen.storyboard in Resources */,
+				917DC71C280BB7240005CD72 /* death.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
