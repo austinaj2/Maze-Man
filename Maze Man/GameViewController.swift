@@ -10,6 +10,7 @@ import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
+    var highScores = [HighScore]()
 
     override func viewDidLoad() {
         super.viewDidLoad()

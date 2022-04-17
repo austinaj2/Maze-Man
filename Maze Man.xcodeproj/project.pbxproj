@@ -16,6 +16,10 @@
 		915C35562803CB6500E06375 /* Maze_ManTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915C35552803CB6500E06375 /* Maze_ManTests.swift */; };
 		915C35602803CB6500E06375 /* Maze_ManUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915C355F2803CB6500E06375 /* Maze_ManUITests.swift */; };
 		915C35622803CB6500E06375 /* Maze_ManUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915C35612803CB6500E06375 /* Maze_ManUITestsLaunchTests.swift */; };
+		917DC70D280B5C330005CD72 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917DC70C280B5C330005CD72 /* GameOverScene.swift */; };
+		917DC70F280B60A00005CD72 /* HighScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917DC70E280B60A00005CD72 /* HighScore.swift */; };
+		917DC713280B68500005CD72 /* death.wav in Resources */ = {isa = PBXBuildFile; fileRef = 917DC711280B68500005CD72 /* death.wav */; settings = {ASSET_TAGS = (death, ); }; };
+		917DC714280B89630005CD72 /* bite.wav in Resources */ = {isa = PBXBuildFile; fileRef = 917DC710280B68500005CD72 /* bite.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,10 @@
 		915C355B2803CB6500E06375 /* Maze ManUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Maze ManUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		915C355F2803CB6500E06375 /* Maze_ManUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maze_ManUITests.swift; sourceTree = "<group>"; };
 		915C35612803CB6500E06375 /* Maze_ManUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maze_ManUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		917DC70C280B5C330005CD72 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		917DC70E280B60A00005CD72 /* HighScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScore.swift; sourceTree = "<group>"; };
+		917DC710280B68500005CD72 /* bite.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = bite.wav; path = "A4-image-resources/bite.wav"; sourceTree = SOURCE_ROOT; };
+		917DC711280B68500005CD72 /* death.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = death.wav; path = "A4-image-resources/death.wav"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +108,11 @@
 			children = (
 				915C353B2803CB6400E06375 /* AppDelegate.swift */,
 				915C35412803CB6400E06375 /* GameScene.swift */,
+				917DC70E280B60A00005CD72 /* HighScore.swift */,
+				917DC70C280B5C330005CD72 /* GameOverScene.swift */,
 				915C35432803CB6400E06375 /* GameViewController.swift */,
+				917DC710280B68500005CD72 /* bite.wav */,
+				917DC711280B68500005CD72 /* death.wav */,
 				915C35452803CB6400E06375 /* Main.storyboard */,
 				915C35482803CB6500E06375 /* Assets.xcassets */,
 				915C354A2803CB6500E06375 /* LaunchScreen.storyboard */,
@@ -188,6 +200,10 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				KnownAssetTags = (
+					bite,
+					death,
+				);
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
@@ -229,6 +245,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				917DC714280B89630005CD72 /* bite.wav in Resources */,
+				917DC713280B68500005CD72 /* death.wav in Resources */,
 				915C35472803CB6400E06375 /* Main.storyboard in Resources */,
 				915C35492803CB6500E06375 /* Assets.xcassets in Resources */,
 				915C354C2803CB6500E06375 /* LaunchScreen.storyboard in Resources */,
@@ -258,7 +276,9 @@
 			files = (
 				915C35422803CB6400E06375 /* GameScene.swift in Sources */,
 				915C35442803CB6400E06375 /* GameViewController.swift in Sources */,
+				917DC70D280B5C330005CD72 /* GameOverScene.swift in Sources */,
 				915C353C2803CB6400E06375 /* AppDelegate.swift in Sources */,
+				917DC70F280B60A00005CD72 /* HighScore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
